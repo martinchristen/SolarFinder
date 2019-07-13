@@ -2,7 +2,7 @@
 Sprint at EuroPython 2019
 
 Sample files:
-bit.ly/2GaYY0b
+[bit.ly](bit.ly/2GaYY0b)
 
 Reading the data:
 [rasterio](https://rasterio.readthedocs.io/en/stable/)
@@ -14,8 +14,6 @@ Main project parts:
 1. Data preprocessing  
 2. Backend  
 3. Frontend  
-
-+ Database used for all elements
 
 Data required:  
 1. Image small / large resolution  
