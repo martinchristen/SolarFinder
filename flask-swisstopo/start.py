@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 import requests
 import uuid
+import os
 
 
 app = Flask(__name__)
@@ -27,14 +28,16 @@ def hello_world():
 
     response = requests.request("GET", url, data=payload, headers=headers)
 
-    filename = f"temp/{zoom}-{x}-{y}.jpg"
+    filename = f"temp/{zoom}-{tilex}-{tiley}.jpg"
 
     with open(filename, "wb") as image:
         image.write(response.content)
 
-    return render_template("index.html", user_image=filename)
+    cwd = os.getcwd()
+
+    return render_template("index.html")
 
 
 
 
-app.run(debug=True, port=5555)
+app.run(debug=True, host="localhost", port=5555)
